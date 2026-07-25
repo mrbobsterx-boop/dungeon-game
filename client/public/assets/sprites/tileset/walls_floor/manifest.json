@@ -1,0 +1,19 @@
+{
+  "_note": "Порядок по позиции на исходном листе. Если тайл выглядит не тем — открой _contact_sheet.html и поправь только имя файла тут, код трогать не нужно.",
+  "wall_straight": "sprite_000.png",
+  "wall_corner_inner": "sprite_001.png",
+  "wall_corner_outer": "sprite_002.png",
+  "wall_t": "sprite_003.png",
+  "wall_cross": "sprite_004.png",
+  "wall_short": "sprite_005.png",
+  "wall_half": "sprite_006.png",
+  "wall_column": "sprite_007.png",
+  "floor_base": "sprite_024.png",
+  "floor_mossy": "sprite_025.png",
+  "floor_cracked": "sprite_026.png",
+  "floor_cracked_moss": "sprite_027.png",
+  "floor_circle_pattern": "sprite_028.png",
+  "floor_dirty": "sprite_029.png",
+  "floor_plants": "sprite_030.png",
+  "floor_damaged": "sprite_031.png"
+}
