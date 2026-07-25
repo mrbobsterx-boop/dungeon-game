@@ -1,4 +1,0 @@
-{
-  "rustySword": { "type": "weapon", "rarity": "common", "stats": { "damage": 3 } },
-  "basicLantern": { "type": "lightSource", "rarity": "common", "stats": { "radius": 3 } }
-}

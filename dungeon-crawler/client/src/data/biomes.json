@@ -1,6 +1,0 @@
-{
-  "labyrinth": { "minDepth": 1, "maxDepth": 10 },
-  "cave": { "minDepth": 1, "maxDepth": 15 },
-  "ruins": { "minDepth": 5, "maxDepth": 25 },
-  "mines": { "minDepth": 8, "maxDepth": 30 }
-}

@@ -1,4 +1,0 @@
-{
-  "slime": { "health": 10, "damage": 2, "behavior": "chase" },
-  "skeleton": { "health": 20, "damage": 5, "behavior": "attack" }
-}
