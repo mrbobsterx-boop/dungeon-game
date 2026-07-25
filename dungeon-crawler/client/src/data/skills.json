@@ -1,0 +1,4 @@
+{
+  "quickStrike": { "cost": 1, "effect": "increase_attack_speed" },
+  "nightVision": { "cost": 2, "effect": "increase_light_radius" }
+}
