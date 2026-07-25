@@ -1,15 +1,31 @@
-// Загрузка и кэширование спрайтов/тайлсетов.
+// Загрузка и кэширование спрайтов по манифестам.
 export class SpriteManager {
   constructor() {
-    this.cache = new Map();
+    this.images = new Map(); // "категория:ключ" -> HTMLImageElement
   }
 
-  async load(key, path) {
-    if (this.cache.has(key)) return this.cache.get(key);
-    const img = new Image();
-    img.src = path;
-    await new Promise((resolve) => (img.onload = resolve));
-    this.cache.set(key, img);
-    return img;
+  async loadManifest(category, folder) {
+    const manifestUrl = `/${folder}/manifest.json`;
+    const manifest = await fetch(manifestUrl).then((r) => r.json());
+    const entries = Object.entries(manifest).filter(([key]) => !key.startsWith('_'));
+    await Promise.all(
+      entries.map(([key, filename]) => this._loadOne(category, key, `/${folder}/${filename}`))
+    );
+  }
+
+  _loadOne(category, key, path) {
+    return new Promise((resolve, reject) => {
+      const img = new Image();
+      img.onload = () => {
+        this.images.set(`${category}:${key}`, img);
+        resolve(img);
+      };
+      img.onerror = () => reject(new Error(`Не удалось загрузить спрайт: ${path}`));
+      img.src = path;
+    });
+  }
+
+  get(category, key) {
+    return this.images.get(`${category}:${key}`);
   }
 }
