@@ -11,6 +11,7 @@ import { FloorGenerator } from '../world/dungeon/FloorGenerator.js';
 import { Renderer } from '../rendering/Renderer.js';
 import { Camera } from '../rendering/Camera.js';
 import { LightingSystem } from '../rendering/LightingSystem.js';
+import { SpriteManager } from '../rendering/SpriteManager.js';
 import { FogOfWar } from '../world/FogOfWar.js';
 import { MovementSystem } from '../systems/MovementSystem.js';
 import { createPlayer, PLAYER_RADIUS, PLAYER_SPEED } from '../entities/player/Player.js';
@@ -41,11 +42,20 @@ export class Engine {
     this.playerController = new PlayerController(this.input);
     this.movementSystem = new MovementSystem();
     this.camera = new Camera(this.canvas.width, this.canvas.height);
-    this.renderer = new Renderer(this.canvas);
+    this.sprites = new SpriteManager();
+    this.renderer = new Renderer(this.canvas, this.sprites);
     this.lighting = new LightingSystem(this.tileMap);
     this.fogOfWar = new FogOfWar(this.tileMap);
 
     this.loop = new GameLoop(this.update.bind(this), this.render.bind(this));
+  }
+
+  /** Грузит спрайты по манифестам. Вызывать и ждать перед start(). */
+  async loadAssets() {
+    await Promise.all([
+      this.sprites.loadManifest('tile', 'assets/sprites/tileset/walls_floor'),
+      this.sprites.loadManifest('player', 'assets/sprites/player')
+    ]);
   }
 
   start() {
