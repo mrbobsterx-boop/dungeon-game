@@ -1,6 +1,12 @@
-// Точка входа. Инициализирует Engine и запускает игровой цикл.
+// Точка входа. Ждём загрузки спрайтов, потом инициализируем Engine и стартуем цикл.
 import { Engine } from './core/Engine.js';
 
 const canvas = document.getElementById('game-canvas');
 const engine = new Engine(canvas);
-engine.start();
+
+engine.loadAssets()
+  .then(() => engine.start())
+  .catch((err) => {
+    console.error('Не удалось загрузить спрайты:', err);
+    engine.start();
+  });
