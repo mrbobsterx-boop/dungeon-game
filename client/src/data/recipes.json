@@ -1,0 +1,70 @@
+{
+  "torch": {
+    "name": "Факел",
+    "category": "tools",
+    "kind": "item",
+    "rarity": "uncommon",
+    "description": "Простой факел, который освещает тёмные места и отпугивает существ.",
+    "resultItemId": "torch",
+    "resultAmount": 1,
+    "requirements": [
+      { "itemId": "wood", "amount": 12 },
+      { "itemId": "cloth", "amount": 8 },
+      { "itemId": "oil", "amount": 5 }
+    ]
+  },
+  "rope": {
+    "name": "Верёвка",
+    "category": "tools",
+    "kind": "item",
+    "rarity": "common",
+    "resultItemId": "rope",
+    "resultAmount": 1,
+    "requirements": [{ "itemId": "fiber", "amount": 6 }]
+  },
+  "bandage": {
+    "name": "Бинт",
+    "category": "consumables",
+    "kind": "item",
+    "rarity": "common",
+    "resultItemId": "bandage",
+    "resultAmount": 2,
+    "requirements": [{ "itemId": "cloth", "amount": 3 }]
+  },
+  "stoneSword": {
+    "name": "Каменный меч",
+    "category": "weapon",
+    "kind": "item",
+    "rarity": "common",
+    "resultItemId": "stoneSword",
+    "resultAmount": 1,
+    "requirements": [{ "itemId": "wood", "amount": 4 }, { "itemId": "stone", "amount": 6 }]
+  },
+  "leatherArmor": {
+    "name": "Кожаный доспех",
+    "category": "armor",
+    "kind": "item",
+    "rarity": "common",
+    "resultItemId": "leatherArmor",
+    "resultAmount": 1,
+    "requirements": [{ "itemId": "leather", "amount": 10 }]
+  },
+  "grilledMeat": {
+    "name": "Жареное мясо",
+    "category": "consumables",
+    "kind": "food",
+    "rarity": "common",
+    "resultItemId": "grilledMeat",
+    "resultAmount": 1,
+    "requirements": [{ "itemId": "rawMeat", "amount": 1 }]
+  },
+  "healthPotion": {
+    "name": "Зелье здоровья",
+    "category": "consumables",
+    "kind": "potion",
+    "rarity": "uncommon",
+    "resultItemId": "healthPotion",
+    "resultAmount": 1,
+    "requirements": [{ "itemId": "redCrystal", "amount": 2 }, { "itemId": "flower", "amount": 3 }]
+  }
+}

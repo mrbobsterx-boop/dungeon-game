@@ -1,0 +1,8 @@
+{
+  "slime":       { "health": 10, "damage": 2,  "behavior": "chase",  "biomes": ["cave"] },
+  "skeleton":    { "health": 20, "damage": 5,  "behavior": "attack", "biomes": ["ruins", "mines"] },
+  "caveBat":     { "health": 8,  "damage": 2,  "behavior": "flee",   "biomes": ["cave"] },
+  "goblinMiner": { "health": 16, "damage": 4,  "behavior": "chase",  "biomes": ["mines"] },
+  "stoneGolem":  { "health": 60, "damage": 12, "behavior": "patrol", "biomes": ["ruins", "mines"], "boss": false },
+  "cryptWarden": { "health": 200, "damage": 20, "behavior": "attack", "biomes": ["ruins"], "boss": true }
+}

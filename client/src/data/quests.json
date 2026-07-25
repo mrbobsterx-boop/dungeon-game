@@ -1,0 +1,22 @@
+{
+  "quests": {
+    "depthsBelowUs": {
+      "type": "main",
+      "title": "Глубины под нами",
+      "objectives": [
+        { "id": "findFloor2", "text": "Найдите вход на 2-й этаж" },
+        { "id": "activateLift", "text": "Активируйте лифт на 2-м этаже" },
+        { "id": "findMineMap", "text": "Найдите карту шахт" },
+        { "id": "reachFloor5", "text": "Спуститесь на 5-й этаж" },
+        { "id": "exploreFloor5", "text": "Исследуйте 5-й этаж" }
+      ],
+      "rewards": { "gold": 1500, "gems": 250, "items": ["shield_common", "potion_purple"] }
+    },
+    "missingMiner": {
+      "type": "side",
+      "title": "Пропавший шахтёр",
+      "objectives": [{ "id": "findGron", "text": "Найти шахтёра Грона" }],
+      "rewards": { "gold": 200 }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "categories": ["combat", "agility", "survival", "magic", "support"],
+  "skills": {
+    "powerStrike": {
+      "category": "combat",
+      "tier": 1,
+      "maxRank": 5,
+      "requires": null,
+      "effectPerRank": { "damagePercent": 3 }
+    },
+    "shieldMastery": {
+      "category": "combat",
+      "tier": 1,
+      "maxRank": 5,
+      "requires": null,
+      "effectPerRank": { "defensePercent": 2 }
+    },
+    "counterStance": {
+      "category": "combat",
+      "tier": 2,
+      "maxRank": 3,
+      "requires": "powerStrike",
+      "effectPerRank": { "counterChance": 4 }
+    }
+  }
+}
